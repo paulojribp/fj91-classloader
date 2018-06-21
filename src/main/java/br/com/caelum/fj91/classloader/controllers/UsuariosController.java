@@ -51,7 +51,7 @@ public class UsuariosController {
 	@DeleteMapping("/{id}")
 	@Transactional
 	public String remover(@PathVariable("id") Long id) {
-		this.usuarioRepository.delete(id);
+		this.usuarioRepository.deleteById(id);
 		return REDIRECT_PAGINA_USUARIOS;
 	}
 	
